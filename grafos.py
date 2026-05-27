@@ -1,14 +1,15 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import random as r
-import time
+import time 
+import math
 
 r.seed(time.time())
 
 G = nx.Graph()
-N = 15
+N = int(input("Digite o número de elementos no grafo: "))
 v = list(range(1,N+1))
-p = 1/2
+p = float(input("Digite a probabilidade: "))
 
 for i in v:
     G.add_node(i)
@@ -24,11 +25,18 @@ k = 0
 for i in v:
     sum += G.degree(i)
 
+# media de vertices por nós
 k = 1/N * sum
+# mudança de fase
+mf = 1/N
+# probabilidade critica
+pc = math.log(N)/N
 
-print(k)
+print(f"Média de vertices: {k}")
+print(f"Mudança de fase: {mf}")
+print(f"Probabilidade crítica: {pc}")
 
-nx.draw(G, with_labels=True, node_size=2000)
+nx.draw(G, with_labels=True, node_size=200)
 plt.show()
 
 #for i in v:
