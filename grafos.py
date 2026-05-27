@@ -25,13 +25,19 @@ sum = 0
 for i in v:
     sum += G.degree(i)
 
-# media de vertices por nós
+# número esperado de arestas
+ea = p*(N*(N-1))/2
+# media de arestas por nós
 k = 1/N * sum
+# grau médio
+gm = (2*ea)/N
 # mudança de fase
 mf = 1/N
 # probabilidade critica
 pc = math.log(N)/N
 
+print(f"Número esperado de arestas: {ea}")
+print(f"Grau médio: {gm}")
 print(f"Média de vertices: {k}")
 print(f"Mudança de fase: {mf}")
 print(f"Probabilidade crítica: {pc}")
