@@ -11,7 +11,7 @@ N = int(input("Digite o número de elementos no grafo: "))
 v = list(range(1,N+1))
 p = float(input("Digite a probabilidade: "))
 
-# geração de grafos aleátorios não-direcionados
+# geração de grafos aleátorios não-direcionados por probabilidade
 for i in v:
     G.add_node(i)
 
@@ -21,6 +21,7 @@ for i in v:
             if r.random()<=p:
                 G.add_edge(i, j)
 
+# calculo da soma dos graus dos vertices
 sum = 0
 for i in v:
     sum += G.degree(i)
@@ -36,12 +37,14 @@ mf = 1/N
 # probabilidade critica
 pc = math.log(N)/N
 
+# imprime os calculos
 print(f"Número esperado de arestas: {ea}")
 print(f"Grau médio: {gm}")
 print(f"Média de vertices: {k}")
 print(f"Mudança de fase: {mf}")
 print(f"Probabilidade crítica: {pc}")
 
+# renderiza os grafos
 nx.draw(G, with_labels=True, node_size=200)
 plt.show()
 
