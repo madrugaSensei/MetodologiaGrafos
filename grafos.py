@@ -11,6 +11,7 @@ N = int(input("Digite o número de elementos no grafo: "))
 v = list(range(1,N+1))
 p = float(input("Digite a probabilidade: "))
 
+# geração de grafos aleátorios não-direcionados
 for i in v:
     G.add_node(i)
 
@@ -21,7 +22,6 @@ for i in v:
                 G.add_edge(i, j)
 
 sum = 0
-k = 0
 for i in v:
     sum += G.degree(i)
 
