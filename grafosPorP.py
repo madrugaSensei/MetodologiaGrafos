@@ -36,11 +36,14 @@ gm = (2*ea)/N
 mf = 1/N
 # probabilidade critica
 pc = math.log(N)/N
+# probabilidade de um grafo ter o grau médio
+pgm = (gm**k*10**-gm)/math.factorial(int(k))
 
 # imprime os calculos
 print(f"Número esperado de arestas: {ea}")
 print(f"Grau médio: {gm}")
-print(f"Média de vertices: {k}")
+print(f"Probabilidade de um vértice ter o grau {gm}: {pgm}")
+print(f"Média de arestas por nó: {k}")
 print(f"Mudança de fase: {mf}")
 print(f"Probabilidade crítica: {pc}")
 
