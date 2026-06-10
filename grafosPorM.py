@@ -8,7 +8,7 @@ r.seed(time.time())
 
 G = nx.Graph()
 N = int(input("Digite o número de elementos no grafo: "))
-v = list(range(1,N))
+v = list(range(1,N+1))
 m = float(input("Digite a quantidade de arestas: "))
 
 # geração de grafos aleátorios não-direcionados por número de arestas
