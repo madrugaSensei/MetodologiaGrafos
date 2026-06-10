@@ -8,7 +8,7 @@ r.seed(time.time())
 
 G = nx.Graph()
 N = int(input("Digite o número de elementos no grafo: "))
-v = list(range(1,N+1))
+v = list(range(0,N))
 m = float(input("Digite a quantidade de arestas: "))
 
 # geração de grafos aleátorios não-direcionados por número de arestas
@@ -45,6 +45,8 @@ mf = 1/N
 pc = math.log(N)/N
 # probabilidade de reaparecimento
 pr = 1/math.factorial(N)/math.factorial(2)*math.factorial(N-2)
+# probabilidade de dois vertices estarem diretamente conectados
+pv = (2*m)/(N*(N-1))
 
 # imprime os calculos
 print(f"Grau médio: {gm}")
@@ -52,6 +54,7 @@ print(f"Média de vertices: {k}")
 print(f"Mudança de fase: {mf}")
 print(f"Probabilidade crítica: {pc}")
 print(f"Probabilidade de reaparecimento: {pr}")
+print(f"Probabilidade de dois vertices estarem diretamente conectados: {pv}")
 
 # renderiza os grafos
 nx.draw(G, with_labels=True, node_size=200)
