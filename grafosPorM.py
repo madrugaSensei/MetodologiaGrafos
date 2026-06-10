@@ -47,6 +47,8 @@ pc = math.log(N)/N
 pr = 1/math.factorial(N)/math.factorial(2)*math.factorial(N-2)
 # probabilidade de dois vertices estarem diretamente conectados
 pv = (2*m)/(N*(N-1))
+# binomial
+b = pv(N-1)
 
 # imprime os calculos
 print(f"Grau médio: {gm}")

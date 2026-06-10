@@ -38,6 +38,8 @@ mf = 1/N
 pc = math.log(N)/N
 # probabilidade de um grafo ter o grau médio
 pgm = (gm**k*10**-gm)/math.factorial(int(k))
+# distribuição de Binomial
+b = p(N - 1)
 
 # imprime os calculos
 print(f"Número esperado de arestas: {ea}")
